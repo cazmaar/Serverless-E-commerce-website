@@ -1,0 +1,5 @@
+variable "accountId" {
+}
+
+variable "region" {
+}
