@@ -10,6 +10,6 @@ output "three" {
 output "four" {
   value = aws_api_gateway_integration.LambdaIntegration
 }
-# output "five" {
-#   value = aws_lambda_permission.apigw_lambda
-# }
+output "five" {
+  value = aws_api_gateway_deployment.example.invoke_url
+}

@@ -20,12 +20,10 @@ EOF
 
 
 resource "aws_lambda_function" "product_function" {
-  # If the file is not in the current working directory you will need to include a
-  # path.module in the filename.
-  filename      = "${path.module}/index.js.zip" 
+  filename      = "${path.module}/product.zip" 
   function_name = var.lambda_function_name
   role          = aws_iam_role.iam_for_lambda.arn
-  handler       = "index.test"
+  handler       = "product.handler"
   runtime = "nodejs16.x"
 
   # ... other configuration ...
